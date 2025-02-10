@@ -1,17 +1,45 @@
-# web_reinvent_test
+# To-Do List App with Riverpod and Flutter Hooks
 
-A new Flutter project.
+This is a simple to-do list app built using Flutter, Riverpod, and Flutter Hooks. The app allows users to add tasks, mark them as complete, and manage their to-do list efficiently.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- Add new tasks
+- Display a list of tasks with their completion status
+- Mark tasks as complete or incomplete using checkboxes
+- Uses Riverpod for state management
+- Utilizes Flutter Hooks for managing the text field controller
 
-A few resources to get you started if this is your first Flutter project:
+## Installation
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/Sparsh327/web_reinvent_test.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd todo_list_riverpod
+   ```
+3. Install dependencies:
+   ```sh
+   flutter pub get
+   ```
+4. Run the app:
+   ```sh
+   flutter run
+   ```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# web_reinvent_test
+## Dependencies
+
+This project uses the following dependencies:
+
+- `flutter_riverpod` for state management
+- `hooks_riverpod` for integrating Flutter Hooks with Riverpod
+
+## How It Works
+
+- The `Task` model represents a task with a title and completion status.
+- The `TaskNotifier` extends `StateNotifier<List<Task>>` to manage the list of tasks.
+- `StateNotifierProvider` is used to expose the state to widgets.
+- `HookConsumerWidget` is used in `ToDoScreen` to utilize `useTextEditingController()` for handling the input field.
+- Users can add a task, which updates the state, and toggle its completion status using a checkbox.
